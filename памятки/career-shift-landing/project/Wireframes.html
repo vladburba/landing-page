@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>Vlad Burba — Wireframes</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #f0eee9; font-family: 'Inter', sans-serif; }
+  * { box-sizing: border-box; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="wireframes.jsx"></script>
+<script type="text/babel">
+  const W = 1100;
+
+  function App() {
+    return (
+      <DesignCanvas>
+        <DCSection
+          id="hero-page"
+          title="Влад Бурба — личная страница"
+          subtitle="Wireframe · 3 направления структуры. Inter, b&w, без финальных цветов."
+        >
+          <DCArtboard id="A" label="A · Classic stacked — центрированный hero, конвенциональный ритм" width={W} height={1480}>
+            <VariantA />
+          </DCArtboard>
+          <DCArtboard id="B" label="B · Asymmetric split — двухколоночная сетка, идентичность слева" width={W} height={1480}>
+            <VariantB />
+          </DCArtboard>
+          <DCArtboard id="C" label="C · Editorial — крупная типографика, нумерация секций (§01/§02/§03)" width={W} height={1620}>
+            <VariantC />
+          </DCArtboard>
+        </DCSection>
+
+        <DCPostIt x={40} y={40} w={300}>
+          Wireframe — структура и расположение, без финальных цветов. Один акцент (жёлтый highlighter) — служебный, для пометок. Hero solid тёмный, остальное — светлая бумага. Inter везде. Кнопка rounded-md (8px). Без pill, без статус-точек, без иконок-кружочков.
+        </DCPostIt>
+        <DCPostIt x={40} y={260} w={300}>
+          Что варьируется между A/B/C: композиция (центр / асимметрия / редакционная), масштаб типографики и плотность hero. Контент идентичен по смыслу — разные ритмы.
+        </DCPostIt>
+      </DesignCanvas>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
