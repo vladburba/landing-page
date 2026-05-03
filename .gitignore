@@ -3,3 +3,7 @@ node_modules/
 *.log
 .vscode/
 .idea/
+
+# Распакованный handoff bundle от Claude Design — лежит локально для справки,
+# в репозиторий лендинга не тащим (~88 КБ JSX).
+памятки/career-shift-landing/
