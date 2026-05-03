@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Shift — смени профессию осознанно</title>
+  <meta name="description" content="Программа осознанной смены карьеры: разберём, куда идти, как переходить и что делать на старте." />
+
+  <!-- Tailwind через CDN. Для прода рекомендуется собирать через PostCSS, но для лендинга-визитки CDN ок. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="font-bold text-lg">Career Shift</a>
+      <nav class="hidden sm:flex gap-6 text-sm text-slate-600">
+        <a href="#for-whom" class="hover:text-slate-900">Для кого</a>
+        <a href="#what" class="hover:text-slate-900">Что получишь</a>
+        <a href="#how" class="hover:text-slate-900">Как проходит</a>
+        <a href="#faq" class="hover:text-slate-900">FAQ</a>
+      </nav>
+      <a href="#contact" class="text-sm font-medium bg-slate-900 text-white px-4 py-2 rounded-lg hover:bg-slate-700 transition">
+        Записаться
+      </a>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="max-w-5xl mx-auto px-6 py-20 sm:py-28 text-center">
+    <h1 class="text-4xl sm:text-6xl font-bold tracking-tight leading-tight">
+      Смени профессию <br class="hidden sm:block" />
+      <span class="text-indigo-600">осознанно</span>, а не наугад
+    </h1>
+    <p class="mt-6 text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto">
+      Личная программа career-shift: за 6 недель разберём, куда тебе идти, как туда перейти и что делать в первые месяцы на новой роли.
+    </p>
+    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#contact" class="bg-indigo-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-indigo-700 transition">
+        Записаться на разбор
+      </a>
+      <a href="#how" class="bg-white border border-slate-300 text-slate-900 font-medium px-6 py-3 rounded-lg hover:bg-slate-100 transition">
+        Как проходит
+      </a>
+    </div>
+    <p class="mt-4 text-sm text-slate-500">Бесплатная 30-минутная консультация перед началом</p>
+  </section>
+
+  <!-- ===================== ДЛЯ КОГО ===================== -->
+  <section id="for-whom" class="bg-white border-y border-slate-200">
+    <div class="max-w-5xl mx-auto px-6 py-20">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center">Для кого это</h2>
+      <p class="mt-4 text-center text-slate-600 max-w-2xl mx-auto">
+        Если ты уже какое-то время в профессии, но чувствуешь, что не своё — это для тебя.
+      </p>
+
+      <div class="mt-12 grid sm:grid-cols-3 gap-6">
+        <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+          <div class="text-2xl">🧭</div>
+          <h3 class="mt-3 font-semibold">Не понимаешь, куда идти</h3>
+          <p class="mt-2 text-sm text-slate-600">Хочется сменить, но непонятно — на что именно. Рассмотрим варианты под твои сильные стороны.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+          <div class="text-2xl">🛠</div>
+          <h3 class="mt-3 font-semibold">Знаешь куда, но не знаешь как</h3>
+          <p class="mt-2 text-sm text-slate-600">Цель есть — нет плана перехода. Соберём дорожную карту: учёба, портфолио, первые отклики.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+          <div class="text-2xl">⚡️</div>
+          <h3 class="mt-3 font-semibold">Уже в процессе, но застрял</h3>
+          <p class="mt-2 text-sm text-slate-600">Учишься или ищешь работу, но нет результата. Разберём, что мешает, и снимем затыки.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ЧТО ПОЛУЧИШЬ ===================== -->
+  <section id="what" class="max-w-5xl mx-auto px-6 py-20">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center">Что ты получишь</h2>
+
+    <div class="mt-12 grid sm:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl bg-white border border-slate-200">
+        <h3 class="font-semibold">Карта направлений</h3>
+        <p class="mt-2 text-sm text-slate-600">3-5 реалистичных вариантов смены, под твой бэкграунд и финансовые ограничения.</p>
+      </div>
+      <div class="p-6 rounded-xl bg-white border border-slate-200">
+        <h3 class="font-semibold">План перехода на 6 месяцев</h3>
+        <p class="mt-2 text-sm text-slate-600">Что учить, в каком порядке, чем подкреплять — чтобы не учиться год вхолостую.</p>
+      </div>
+      <div class="p-6 rounded-xl bg-white border border-slate-200">
+        <h3 class="font-semibold">Резюме и сопроводительные</h3>
+        <p class="mt-2 text-sm text-slate-600">Перепишем под новую роль так, чтобы прошлый опыт работал на тебя, а не против.</p>
+      </div>
+      <div class="p-6 rounded-xl bg-white border border-slate-200">
+        <h3 class="font-semibold">Подготовка к интервью</h3>
+        <p class="mt-2 text-sm text-slate-600">Тренировочные интервью под целевые компании, разбор ответов, работа с возражениями про «нет опыта».</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== КАК ПРОХОДИТ ===================== -->
+  <section id="how" class="bg-white border-y border-slate-200">
+    <div class="max-w-5xl mx-auto px-6 py-20">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center">Как проходит</h2>
+
+      <ol class="mt-12 space-y-6 max-w-2xl mx-auto">
+        <li class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center">1</div>
+          <div>
+            <h3 class="font-semibold">Бесплатный созвон 30 минут</h3>
+            <p class="mt-1 text-sm text-slate-600">Знакомимся, ты рассказываешь свой контекст, я честно говорю — могу помочь или нет.</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center">2</div>
+          <div>
+            <h3 class="font-semibold">Диагностика: 1 неделя</h3>
+            <p class="mt-1 text-sm text-slate-600">Опросники, два созвона, разбор сильных сторон и реальных ограничений (деньги, время, обязательства).</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center">3</div>
+          <div>
+            <h3 class="font-semibold">Стратегия: 2 недели</h3>
+            <p class="mt-1 text-sm text-slate-600">Карта направлений, выбор приоритета, план перехода на 6 месяцев.</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center">4</div>
+          <div>
+            <h3 class="font-semibold">Запуск: 3 недели</h3>
+            <p class="mt-1 text-sm text-slate-600">Резюме, отклики, подготовка к интервью, разбор первых результатов.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section id="faq" class="max-w-3xl mx-auto px-6 py-20">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center">FAQ</h2>
+
+    <div class="mt-10 space-y-4">
+      <details class="group bg-white border border-slate-200 rounded-xl p-5">
+        <summary class="cursor-pointer font-semibold flex justify-between items-center">
+          Сколько это стоит?
+          <span class="text-slate-400 group-open:rotate-180 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm text-slate-600">
+          <!-- TODO: укажи цену или диапазон -->
+          Стоимость обсуждаем на бесплатном созвоне — зависит от формата (только консультации или с сопровождением до оффера).
+        </p>
+      </details>
+
+      <details class="group bg-white border border-slate-200 rounded-xl p-5">
+        <summary class="cursor-pointer font-semibold flex justify-between items-center">
+          А если у меня нет идей, куда переходить?
+          <span class="text-slate-400 group-open:rotate-180 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm text-slate-600">
+          Это нормальная исходная точка. Первая неделя как раз про то, чтобы их собрать — на основе твоих сильных сторон, а не модных профессий из соцсетей.
+        </p>
+      </details>
+
+      <details class="group bg-white border border-slate-200 rounded-xl p-5">
+        <summary class="cursor-pointer font-semibold flex justify-between items-center">
+          Гарантируешь оффер?
+          <span class="text-slate-400 group-open:rotate-180 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm text-slate-600">
+          Нет. Никто честный этого не гарантирует — слишком много факторов вне моего контроля. Гарантирую план, обратную связь и подготовку к интервью.
+        </p>
+      </details>
+
+      <details class="group bg-white border border-slate-200 rounded-xl p-5">
+        <summary class="cursor-pointer font-semibold flex justify-between items-center">
+          Сколько времени в неделю надо вкладывать?
+          <span class="text-slate-400 group-open:rotate-180 transition">▾</span>
+        </summary>
+        <p class="mt-3 text-sm text-slate-600">
+          Минимум 5-7 часов: один созвон + домашка. Можно совмещать с работой.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT / CTA ===================== -->
+  <section id="contact" class="bg-indigo-600 text-white">
+    <div class="max-w-3xl mx-auto px-6 py-20 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold">Готов начать?</h2>
+      <p class="mt-4 text-indigo-100 max-w-xl mx-auto">
+        Напиши пару строк о своей ситуации — отвечу в течение суток и предложу слот для бесплатного созвона.
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        <!-- TODO: замени на свой email -->
+        <a href="mailto:hello@example.com?subject=Career%20Shift%20%E2%80%94%20хочу%20на%20разбор"
+           class="bg-white text-indigo-700 font-semibold px-6 py-3 rounded-lg hover:bg-slate-100 transition">
+          Написать на email
+        </a>
+        <!-- TODO: замени на свой Telegram username -->
+        <a href="https://t.me/your_username" target="_blank" rel="noopener"
+           class="bg-indigo-700 border border-indigo-400 text-white font-semibold px-6 py-3 rounded-lg hover:bg-indigo-800 transition">
+          Написать в Telegram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-slate-900 text-slate-400 text-sm">
+    <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row justify-between gap-2">
+      <div>© <span id="year"></span> Career Shift. Все права защищены.</div>
+      <!-- TODO: замени на своё имя/контакт -->
+      <div>Автор: Имя Фамилия</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
