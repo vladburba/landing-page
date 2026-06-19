@@ -4,42 +4,43 @@
 Одностраничный лендинг-визитка. Цель — представиться как инфра-инженер с уклоном в AI и направить посетителя на контакт через Telegram (CTA в hero) или email/GitHub (footer). Никаких форм, никакого бэкенда.
 
 ## Технологии
-- HTML5, всё в одном файле `index.html`
+- HTML5, всё в одном файле `docs/index.html` (папка `docs/` — публикуемый webroot, см. «Публикация»)
 - **Tailwind CSS v4** через jsDelivr CDN (`https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4`), без сборщика и npm
 - Кастомные дизайн-токены через `@theme` в `<style type="text/tailwindcss">` — цвета `paper/hero/ink/mute/rule/accent/accent-soft`, шрифты `sans/mono`, переопределённый брейкпоинт `--breakpoint-sm: 720px` (важно — отличается от дефолтного 640px)
 - Шрифт **Inter** (400/500/600/700) с Google Fonts
 - Иконки **Lucide** через unpkg, инициализация `lucide.createIcons()` в конце body — сейчас используется только для стрелки в CTA
 
 ## Структура
-- `index.html` — четыре секции: hero (тёмный «уголь» #0e0e10), about (`/01 Обо мне`), skills (`/02 Что умею` с тремя буллитами и строкой `stack ──`), footer с контактами
+- `docs/` — публикуемый webroot: `index.html` (сам лендинг) + `favicon.svg`. Больше в `docs/` ничего нет — это и есть готовая к заливке папка.
+- `docs/index.html` — четыре секции: hero (тёмный «уголь» #0e0e10), about (`/01 Обо мне`), skills (`/02 Что умею` с тремя буллитами и строкой `stack ──`), footer с контактами
 - `памятки/career-shift-landing/` — handoff bundle от Claude Design (исходный React-прототип, по которому собран лендинг). README, `project/Page v2.html`, `project/page.jsx` — основной источник дизайна. Не удалять — может пригодиться для правок.
 - `памятки/` — место для заметок
 
 ## Дизайн-система (быстрый референс)
 - Палитра `ink` (по умолчанию из `page.jsx`): hero `#0e0e10`, paper `#fafaf7`, ink `#1a1a1a`, mute `#8a8a86`, rule `#e5e5df`
-- Акцент: индиго `#6c5ce7`, soft-вариант `rgba(108,92,231,.16)`
+- Акцент: изумрудный (console-green) `#059669`, soft-вариант `rgba(5,150,105,.16)`. Сменён с индиго `#6c5ce7` после A/B-теста (коммит `091556a`) — в `@theme` это токены `--color-accent` / `--color-accent-soft`
 - Hero scale `confident`: h1 60px (37px на мобильном), sub 19px, padding 96/120 px (64/80 на мобильном)
 - Layout-обёртка: `max-width: 760px` по центру, горизонтальный паддинг 72px (24px на мобильном)
 - Секции: padding 112px (72px на мобильном), разделены `border-b` цвета rule
 - Брейкпоинт `sm:` = 720px (а не дефолтные Tailwind 640px) — переопределён в `@theme`
 
 ## Как запустить
-Открыть `index.html` в браузере. Для разработки удобно `python3 -m http.server 8000` в корне проекта и открыть `http://localhost:8000/`, чтобы CDN-ресурсы кешировались правильно.
+Открыть `docs/index.html` в браузере. Для разработки удобно `cd docs && python3 -m http.server 8000` и открыть `http://localhost:8000/`, чтобы CDN-ресурсы кешировались правильно.
 
-## Публикация (после урока 3.07)
+## Публикация (актуально на урок 6.07; webroot переехал в `docs/` на уроке 5.11)
 
 Лендинг опубликован **двумя независимыми путями** для учебного сравнения. В модулях 5 и 7 переедем на свой VPS со своим доменом — оба этих URL пригодятся как точка отсчёта «было/стало».
 
 | Канал | URL | Как обновить |
 |---|---|---|
-| **Netlify Drop** | https://vladburba.netlify.app/ | Дашборд Netlify → Deploys → перетащить папку `/tmp/landing-publish/` (только `index.html`, без `.git/`, `памятки/`, `CLAUDE.md`) |
-| **GitHub Pages** | https://vladburba.github.io/landing-page/ | `git push` в `origin/main` — GitHub Actions сам соберёт через ~1 минуту |
+| **Netlify Drop** | https://vladburba.netlify.app/ | Дашборд Netlify → Deploys → перетащить папку `docs/` целиком (она уже чистый webroot: только `index.html` + `favicon.svg`). Возни с `/tmp/landing-publish/` больше не нужно — см. ниже. |
+| **GitHub Pages** | https://vladburba.github.io/landing-page/ | Просто `git push` (uplink ветки = `nas/main`, у него два push-адреса → веером на NAS-бэкап **и** GitHub). Pages отдаёт прямо из `main` → `/docs` (legacy-сборка, **не** Actions), сайт обновляется ~1 мин. Это и есть «push сам обновляет сайт» из урока 6.07. |
 
-**Источник истины** — этот репозиторий и `index.html` в его корне. Netlify Drop — отдельный канал с независимой копией (надо обновлять руками). GitHub Pages — автодеплой, всегда актуально.
+**Источник истины** — этот репозиторий, файл `docs/index.html`. GitHub Pages — автодеплой из `docs/` при каждом push, всегда актуально. Netlify Drop — отдельный независимый канал с ручной заливкой (обновлять перетаскиванием `docs/`).
 
 **Имя ветки** — `main` (переименовано с `master` через `git branch -M main` в начале урока 3.07). Не возвращать в `master`.
 
-**Для Netlify-перетаскивания** не использовать корневую папку проекта — она содержит `.git/`, `памятки/career-shift-landing/` (88 КБ JSX), `CLAUDE.md`, `README.md`, которые **не должны** уходить в публичный веб (Netlify Drop не учитывает `.gitignore`). Используй временную сборку `/tmp/landing-publish/` с одним `index.html`.
+**Для Netlify-перетаскивания** теперь тащи папку `docs/` напрямую — после реструктуризации (урок 5.11) она содержит только публичные файлы (`index.html` + `favicon.svg`), а `.git/`, `памятки/`, `CLAUDE.md`, `README.md` лежат в корне и в `docs/` не попадают. Старая схема с временной сборкой `/tmp/landing-publish/` больше не нужна (Netlify Drop не учитывает `.gitignore`, поэтому раньше корень тащить было нельзя — теперь это решает чистый `docs/`).
 
 **HTTPS** — включён по умолчанию на обоих хостингах, certbot и Let's Encrypt не нужны.
 
