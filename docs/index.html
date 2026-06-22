@@ -6,7 +6,16 @@
   <title>Влад Бурба</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="ИИнфра-Инженер. 20+ лет с серверами и сетями + Python и Claude Code. Найм и консалтинг." />
+  <meta name="theme-color" content="#0e0e10" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph / соцпревью (Telegram, LinkedIn и т.д.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Влад Бурба — ИИнфра-Инженер" />
+  <meta property="og:description" content="20+ лет с серверами и сетями + Python и Claude Code. Найм и консалтинг." />
+  <meta property="og:url" content="https://vladburba.github.io/landing-page/" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta name="twitter:card" content="summary" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -53,7 +62,7 @@
 <body class="bg-paper text-ink font-sans min-h-screen">
 
   <!-- ============ HERO ============ -->
-  <section class="bg-hero text-paper px-6 sm:px-[72px] pt-16 pb-20 sm:pt-24 sm:pb-[120px]">
+  <section class="bg-hero text-paper px-6 sm:px-[72px] pt-16 pb-20 sm:pt-24 sm:pb-[80px]">
     <div class="max-w-[760px] mx-auto">
 
       <!-- Topbar (имя) -->
@@ -77,7 +86,11 @@
            class="vb-cta inline-flex items-center gap-2.5 px-[22px] py-[14px] rounded-lg bg-accent text-white text-[15px] font-medium tracking-[-0.005em] no-underline"
            style="box-shadow: 0 1px 0 rgba(255,255,255,.15) inset, 0 8px 24px rgba(5,150,105,.35);">
           Связаться в Telegram
-          <i data-lucide="arrow-right" style="width:14px; height:14px; opacity:.65; margin-left:2px;"></i>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               style="opacity:.65; margin-left:2px;" aria-hidden="true">
+            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+          </svg>
         </a>
         <div class="mt-3.5 font-mono text-[11px] tracking-[0.06em] uppercase text-white/50">
           найм <span class="opacity-60 px-1.5">·</span> консалтинг
@@ -94,7 +107,7 @@
       <div class="flex items-center gap-3.5 font-mono text-[11px] text-mute tracking-[0.08em] uppercase mb-9">
         <span class="text-ink">01</span>
         <span class="flex-1 h-px bg-rule"></span>
-        <span>Обо мне</span>
+        <h2 class="m-0 text-[11px] font-normal">Обо мне</h2>
       </div>
 
       <div class="grid gap-[22px] text-[18px] leading-[1.65] tracking-[-0.005em] text-pretty" style="color:#2c2c28;">
@@ -125,7 +138,7 @@
       <div class="flex items-center gap-3.5 font-mono text-[11px] text-mute tracking-[0.08em] uppercase mb-9">
         <span class="text-ink">02</span>
         <span class="flex-1 h-px bg-rule"></span>
-        <span>Что умею</span>
+        <h2 class="m-0 text-[11px] font-normal">Что умею</h2>
       </div>
 
       <div>
@@ -170,18 +183,14 @@
       </div>
       <div class="flex flex-wrap gap-[18px] sm:gap-7 text-[14px]">
         <a class="vb-link border-b border-rule pb-0.5 tracking-[-0.005em]"
-           href="mailto:vlad.burba@gmail.com">vlad.burba@gmail.com</a>
-        <a class="vb-link border-b border-rule pb-0.5 tracking-[-0.005em]"
            href="https://t.me/vladburba" target="_blank" rel="noopener">@vladburba</a>
+        <a class="vb-link border-b border-rule pb-0.5 tracking-[-0.005em]"
+           href="mailto:vlad.burba@gmail.com">vlad.burba@gmail.com</a>
         <a class="vb-link border-b border-rule pb-0.5 tracking-[-0.005em]"
            href="https://github.com/vladburba" target="_blank" rel="noopener">github/vladburba</a>
       </div>
     </div>
   </footer>
-
-  <!-- Lucide icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>lucide.createIcons();</script>
 
 </body>
 </html>
